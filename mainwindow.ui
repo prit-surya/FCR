@@ -1,0 +1,3638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1262</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_8">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_20">
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>FCR CONTROLLER SIMULATOR</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="lblVersion">
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>V1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="pbConnect">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>DISCONNECT</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="pbStartSimulation">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>START SIMULATION</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="4">
+     <widget class="QTabWidget" name="tbWidMain">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="StateOfOperation">
+       <attribute name="title">
+        <string>StateOfOper, Misalignment, Internal Designation</string>
+       </attribute>
+       <widget class="QGroupBox" name="gbStateOfOperatn">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>10</y>
+          <width>631</width>
+          <height>501</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="title">
+         <string>StateOfOperation</string>
+        </property>
+        <widget class="QComboBox" name="cbStateOfOperRdrState">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>40</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>2-STBY</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4-OPERATE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3-MAINTAINANCE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>8-IBIT</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperRdrMode">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>80</y>
+           <width>80</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Radar Mode:</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cbStateOfOperTvel">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>280</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>1-HIGH</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>0-LOW</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperTvel">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>280</y>
+           <width>91</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TVEL:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbStateOfOperDetectEl">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>240</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="suffix">
+          <string> Deg</string>
+         </property>
+         <property name="minimum">
+          <double>-4000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>90000000.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperTargetType">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>120</y>
+           <width>80</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Target Type:</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cbStateOfOperTx">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>160</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>0-Transmit OFF</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1-Transmit ON</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperTx">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>160</y>
+           <width>80</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TX:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperDetectRng">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>200</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>DETECTION RNG:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperDetectEl">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>240</y>
+           <width>91</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>DETECTION EL:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperRdrState">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>40</y>
+           <width>80</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Radar State:</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cbStateOfOperDetectRng">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>200</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>1-5 KM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2-10 KM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3-30 KM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4-40 KM</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="cbStateOfOperRdrFreqBandChange">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>370</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>0-Manual</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1-Automatic</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperRdrMode_13">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>460</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ACQ POS REACHED:</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cbStateOfOperFreqBand">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>330</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>0-BAND A</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1-BAND B</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2-BAND C</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3-BAND D</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4-BAND E</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>5-BAND F</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="cbStateOfOperTargetType">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>120</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>0-Normal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1-Test Target</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2-Repeater</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QSpinBox" name="sbStateOfOperRdrnValidSector">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>70</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cbStateOfOperRdrAcqPos">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>460</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>0-Not reached</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1-Az only reached</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2-EL only reached</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3-Az and El reached</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperFreqBand">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>330</y>
+           <width>81</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>FREQ BAND:</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cbStateOfOperRdrMode">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>80</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>1-AA_SECTOR</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2-AA_360</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3-AA_MANUAL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4-AA_STT_INT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>7-AA_STT_EXT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>8-AA_STT_EXT_RST</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperRdrMode_9">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>70</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>N VALID SECTORS:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperRdrMode_8">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>370</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>FREQ BAND CHANGE:</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbUpdateStateOfOperatn">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>460</y>
+           <width>261</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Update State Of Operation</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblStateOfOperRdrMode_14">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>420</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>CLR TWS CMD:</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cbStateOfOperRdrClrTwsCmd">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>420</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>0-OFF</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1-ON</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_7">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>100</y>
+           <width>271</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>Sector 0</string>
+         </property>
+         <widget class="QDoubleSpinBox" name="sbStateOfOperRdrStartAngSec0">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>20</y>
+            <width>151</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="suffix">
+           <string> Deg</string>
+          </property>
+          <property name="maximum">
+           <double>99999999999.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblStateOfOperRdrMode_10">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>131</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>START ANGLE:</string>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="sbStateOfOperRdrEndAngSec0">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>60</y>
+            <width>151</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="suffix">
+           <string> Deg</string>
+          </property>
+          <property name="maximum">
+           <double>99999999999.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblStateOfOperRdrMode_12">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>131</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>SECTOR TYPE:</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="cbStateOfOperRdrSectorTypeSec0">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>100</y>
+            <width>151</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>2- INHIBIT</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="lblStateOfOperRdrMode_11">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>60</y>
+            <width>131</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>END ANGLE:</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_8">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>260</y>
+           <width>271</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>Sector 1</string>
+         </property>
+         <widget class="QDoubleSpinBox" name="sbStateOfOperRdrStartAngSec1">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>20</y>
+            <width>151</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="suffix">
+           <string> Deg</string>
+          </property>
+          <property name="maximum">
+           <double>99999999999.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblStateOfOperRdrMode_22">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>131</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>START ANGLE:</string>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="sbStateOfOperRdrEndAngSec1">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>60</y>
+            <width>151</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="suffix">
+           <string> Deg</string>
+          </property>
+          <property name="maximum">
+           <double>99999999999.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblStateOfOperRdrMode_23">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>131</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>SECTOR TYPE:</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="cbStateOfOperRdrSectorTypeSec1">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>100</y>
+            <width>151</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>2- INHIBIT</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="lblStateOfOperRdrMode_24">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>60</y>
+            <width>131</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>END ANGLE:</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QCheckBox" name="chbEnableStateOfOperatn">
+         <property name="geometry">
+          <rect>
+           <x>560</x>
+           <y>20</y>
+           <width>70</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Enable</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbClearStateofOperation">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>420</y>
+           <width>261</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Clear State Of Operation</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>750</x>
+          <y>470</y>
+          <width>341</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="title">
+         <string>Internal Designation</string>
+        </property>
+        <widget class="QLabel" name="lblIntDesSttTargetId">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>STT TARGET ID:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="leIntDesSttTargetId">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>141</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="inputMask">
+          <string>HHHHHHHH</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbUpdateInternalDesignation">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>70</y>
+           <width>81</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Update</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_33">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>30</y>
+           <width>31</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>0x</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbSendInternalDesignation">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>70</y>
+           <width>91</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Send</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbClearInternalDesignation">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>70</y>
+           <width>81</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>750</x>
+          <y>10</y>
+          <width>341</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="title">
+         <string>Misalignment Message</string>
+        </property>
+        <widget class="QLabel" name="lblMisAlignMessRoll">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ANT_ROLL_MISALIGN:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbMisAlignMessAntRoll">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>30</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="suffix">
+          <string> Deg</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessPitch">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>70</y>
+           <width>141</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ANT_PITCH_MISALIGN:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbMisAlignMessAntPitch">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>70</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="suffix">
+          <string> Deg</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbMisAlignMessAntYaw">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>110</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="suffix">
+          <string> Deg</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessYaw">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>110</y>
+           <width>141</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ANT_YAW_MISALIGN:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmX">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>270</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>LEVER ARM X:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbMisAlignMessLeverArmX">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>270</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="suffix">
+          <string> cm</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmY">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>310</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>LEVER ARM Y:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbMisAlignMessLeverArmY">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>310</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="suffix">
+          <string> cm</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>350</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>LEVER ARM Z:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbMisAlignMessLeverArmZ">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>350</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="suffix">
+          <string> cm</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbUpdateMisalignmentMess">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>390</y>
+           <width>101</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Update</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbMisAlignMessINSPitch">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>190</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="suffix">
+          <string> Deg</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessYaw_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>240</y>
+           <width>141</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>INS_YAW_MISALIGN:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessPitch_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>190</y>
+           <width>141</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>INS_PITCH_MISALIGN:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessRoll_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>150</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>INS_ROLL_MISALIGN:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbMisAlignMessINSRoll">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>150</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="suffix">
+          <string> Deg</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbMisAlignMessINSYaw">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>230</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="suffix">
+          <string> Deg</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbSendMisalignmentMess">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>390</y>
+           <width>101</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Send</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="ClearMisalignmentMess">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>390</y>
+           <width>81</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Clear </string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_9">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>520</y>
+          <width>341</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="title">
+         <string>Reset Cmd</string>
+        </property>
+        <widget class="QLabel" name="lblIntDesSttTargetId_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Reset Rdr Cmd:</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbUpdateRstCmd">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>70</y>
+           <width>91</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Update</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbSendRstCmd">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>70</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Send</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cbRstCmd">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>30</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>0-Not Active</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1-Active</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pbClearRstCmd">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>91</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="InternalDesignation">
+       <attribute name="title">
+        <string>External Designation</string>
+       </attribute>
+       <widget class="QGroupBox" name="gbExternalDesignation">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>1171</width>
+          <height>560</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>External Designation</string>
+        </property>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Desig Coord Select:</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cbExternDesigCoordSel">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>30</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>3</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>0-R,Az,El,V,Vlos,Vxlos</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1-XYZ, V, Vx, Vy, Vz</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2-UTM XYZ,ZoneAlt,V,Vx,Vy,Vz</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3-Lat,Lon,Alt V,Vx,Vy,Vz</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>X:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigX">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>70</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Y:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigY">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>110</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-99999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>9999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>150</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Z:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigZ">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>150</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigUTMX">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>190</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>190</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Tar UTM X:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>230</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Tar UTM Y:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigUTMY">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>230</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>270</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Tar UTM Zone:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigZone">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>270</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string/>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigAlt">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>310</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>310</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Altitude:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigSigAlt">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>350</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>350</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Sigma Altitude:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>390</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Lat:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigLat">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>390</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> Deg</string>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>430</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Lon:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigLon">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>430</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> Deg</string>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigVx">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>470</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> m/sec</string>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>470</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Vx:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigVy">
+         <property name="geometry">
+          <rect>
+           <x>131</x>
+           <y>510</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> m/sec</string>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_13">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>510</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Vy:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>30</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Vz:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigVz">
+         <property name="geometry">
+          <rect>
+           <x>451</x>
+           <y>30</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> m/sec</string>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>329</x>
+           <y>70</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>TGT EXTRAP TIME:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigExtrapTime">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>70</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> Milisec</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigUpdateTime">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>110</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> Milisec</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>-9999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>110</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>LAST UPDATE TIME:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigRange">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>150</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ_2">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>150</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Range:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigVlos">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>470</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> m/sec</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigSigRange">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>190</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ_7">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>350</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Sigma Elevation:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigAzimuth">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>230</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ_10">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>470</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>VLOS:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ_8">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>390</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Velocity:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ_9">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>430</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Sigma Velocity:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigVel">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>390</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> m/sec</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ_4">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>230</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Azimuth:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigElevatn">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>310</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ_11">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>510</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Sigma Vel LOS:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigSigVel">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>430</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> m/sec</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ_3">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>190</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Sigma Range:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigSigElevatn">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>350</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigSigAzm">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>270</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> meters</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbExternalDesigSigVelLos">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>510</y>
+           <width>171</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> m/sec</string>
+         </property>
+         <property name="minimum">
+          <double>-999999999.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ_5">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>270</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Sigma Azimuth:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblMisAlignMessLeverArmZ_6">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>310</y>
+           <width>111</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Elevation:</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_3">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>20</y>
+           <width>305</width>
+           <height>182</height>
+          </rect>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>TGT ID EXT:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblMisAlignMessLeverArmZ_24">
+            <property name="text">
+             <string>Sigma Vel XLOS:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblMisAlignMessLeverArmZ_12">
+            <property name="text">
+             <string>VXLOS:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QDoubleSpinBox" name="sbExternalDesigSigVxLos">
+            <property name="suffix">
+             <string> m/sec</string>
+            </property>
+            <property name="minimum">
+             <double>-999999999.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>99999999.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QDoubleSpinBox" name="sbExternalDesigRCS">
+            <property name="suffix">
+             <string> m^2</string>
+            </property>
+            <property name="minimum">
+             <double>-999999999.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>99999999.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="cbExternalDesigTargetType">
+            <item>
+             <property name="text">
+              <string>0-Air target</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1-Hovering Heli</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2-Other</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QDoubleSpinBox" name="sbExternalDesigId">
+            <property name="suffix">
+             <string/>
+            </property>
+            <property name="decimals">
+             <number>0</number>
+            </property>
+            <property name="minimum">
+             <double>-9999999999.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>999999999999.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblMisAlignMessLeverArmZ_25">
+            <property name="text">
+             <string>RCS:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblMisAlignMessLeverArmZ_26">
+            <property name="text">
+             <string>Target Type:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QDoubleSpinBox" name="sbExternalDesigVxLos">
+            <property name="suffix">
+             <string> m/sec</string>
+            </property>
+            <property name="minimum">
+             <double>-999999999.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>99999999.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QFrame" name="frame_4">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>230</y>
+           <width>331</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="pbSendExternalDesignation">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>120</y>
+            <width>301</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pbUpdateExternalDesignation">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>80</y>
+            <width>301</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Update External Designation</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pbClearExternalDesignation">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>301</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Clear External Designation</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="MisAlignment">
+       <attribute name="title">
+        <string>Antenna</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>10</y>
+          <width>321</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Antenna  Control</string>
+        </property>
+        <widget class="QLabel" name="lblAntControlAz">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PEDESTAL AZ:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbAntControlAz">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>60</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> deg</string>
+         </property>
+         <property name="minimum">
+          <double>-231654132.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>26633206165.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbAntControlEl">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>110</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> deg</string>
+         </property>
+         <property name="minimum">
+          <double>-231654132.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>26633206165.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblAntControlEl">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>110</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PEDESTAL EL:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbAntControlAzRate">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>160</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> deg</string>
+         </property>
+         <property name="minimum">
+          <double>-231654132.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>26633206165.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblAntControlAzRate">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>160</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PEDESTAL AZ Rate:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblAntControlElRate">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>210</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PEDESTAL EL Rate:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbAntControlElRate">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>210</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> deg</string>
+         </property>
+         <property name="minimum">
+          <double>-231654132.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>26633206165.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblAntControlScanDir">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>260</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>SCAN DIRECTION:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblAntControlAntPosTime">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>310</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ANT POS TIME TAG:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbAntControlAntPosTime">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>310</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> Msec</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbAntPosition">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>410</y>
+           <width>281</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Update Antenna Position</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="chbEnableAnteenaControl">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>20</y>
+           <width>70</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Enable</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cbAntControlScanDir">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>260</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>0-CCW</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1-CW</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pbClearAntPosition">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>360</y>
+           <width>281</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clear Antenna Position</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>10</y>
+          <width>691</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>INS Data</string>
+        </property>
+        <widget class="QDoubleSpinBox" name="sbINSDataUTMX">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>110</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> Meter</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataUTMX">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>110</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>UTM_X:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataUTMY">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>160</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> Meter</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataUTMY">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>160</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>UTM_Y:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataUTMZ">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>210</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> Meter</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataUTMZ">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>210</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>UTM_Z:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataUTMZone">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>260</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> Meter</string>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataUTMZone">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>260</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>UTM ZONE:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataTrueHead">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>310</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> deg</string>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataTrueHead">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>310</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>TRUE HEADING:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataRoll">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>360</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ROLL:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataRoll">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>360</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> deg</string>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataPitch">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>60</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PITCH:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataPitch">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>60</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> deg</string>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataYawRate">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>110</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>YAW RATE:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataYawRate">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>110</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> deg</string>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataRollRate">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>160</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> deg</string>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataRollRate">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>160</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ROLL RATE:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataPitchRate">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>210</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> deg</string>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataPitchRate">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>210</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PITCH RATE:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataAvnVelX">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>260</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> m/sec</string>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataAvnVelX">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>260</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>AVN VEL X:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataAvnVelY">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>310</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>AVN VEL Y:</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataAvnVelY">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>310</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> m/sec</string>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataAvnVelZ">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>360</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> m/sec</string>
+         </property>
+         <property name="minimum">
+          <double>-42949672951321.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataAvnVelZ">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>360</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>AVN VEL Z:</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbINSDataUpdate">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>410</y>
+           <width>141</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Update INS Data</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="sbINSDataTimeTag">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>60</y>
+           <width>181</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <double>42949672951321.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblINSDataTimeTag">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>60</y>
+           <width>121</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>INS TIME TAG:</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="chbEnableInsData">
+         <property name="geometry">
+          <rect>
+           <x>550</x>
+           <y>20</y>
+           <width>70</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Enable</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbINSDataClear">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>410</y>
+           <width>151</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clear INS Data</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="StatusReport">
+       <attribute name="title">
+        <string>StatusReport</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0" colspan="2">
+         <widget class="fcrRadar" name="wTest" native="true">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>STT Target REP</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>TWS Target Rep</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>MFL  JAM</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Maintenance</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>fcrRadar</class>
+   <extends>QWidget</extends>
+   <header location="global">fcrradar.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
